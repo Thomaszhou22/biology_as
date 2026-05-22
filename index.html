@@ -154,7 +154,7 @@ body > * { position: relative; z-index: 1; }
         </div>
     </div>
 
-    <div id="preload-overlay"><div class="preload-text">Loading question images...</div><div class="preload-bar-wrap"><div class="preload-bar-fill" id="preload-bar-fill"></div></div><div class="preload-detail" id="preload-detail">已加载 0/0</div></div>
+    <div id="preload-overlay"><div class="preload-text">Loading question images...</div><div class="preload-bar-wrap"><div class="preload-bar-fill" id="preload-bar-fill"></div></div><div class="preload-detail" id="preload-detail">0/0 loaded</div></div>
 
     <div id="quiz-container">
         <div id="progress-bar"><div id="progress-fill"></div></div>
@@ -373,7 +373,7 @@ function preloadImages(onDone) {
     function updateProgress() {
         const pct = Math.round((loaded / total) * 100);
         barFill.style.width = pct + '%';
-        detail.textContent = '已加载 ' + loaded + '/' + total;
+        detail.textContent = loaded + '/' + total + ' loaded';
     }
     updateProgress();
     imgQuestions.forEach(q => {
