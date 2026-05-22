@@ -114,14 +114,14 @@ body > * { position: relative; z-index: 1; }
     </div>
 
     <div class="fixed-btns">
-        <button type="button" id="wrong-book-btn">Wrong Book</button>
+        <button type="button" id="wrong-book-btn">Mistake Collection</button>
         <button type="button" id="ai-settings-toggle" title="Configure AI API Key to analyze weak knowledge points and study suggestions">🔑 API Key</button>
         <button type="button" id="ai-demo-btn" title="View a demo of the AI analysis feature" style="padding:10px 20px;border-radius:14px;border:none;background:linear-gradient(135deg,#92400e,#b45309);color:#fff;font-size:13px;font-family:inherit;font-weight:700;cursor:pointer;box-shadow:0 2px 8px rgba(146,64,14,0.25);transition:all 0.25s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 12px rgba(146,64,14,0.35)'" onmouseout="this.style.transform='';this.style.boxShadow='0 2px 8px rgba(146,64,14,0.25)'">🎬 Demo</button>
     </div>
 
-    <div id="wrong-book-overlay" role="dialog" aria-modal="true" aria-label="Wrong Book" aria-hidden="true">
+    <div id="wrong-book-overlay" role="dialog" aria-modal="true" aria-label="Mistake Collection" aria-hidden="true">
         <div id="wrong-book-panel">
-            <h2 id="wrong-book-title">Wrong Book</h2>
+            <h2 id="wrong-book-title">Mistake Collection</h2>
 
             <div id="ai-settings-panel">
                 <div class="ai-prov-row" id="ai-prov-row"></div>
@@ -303,7 +303,7 @@ function renderWrongBook() {
 }
 function openWrongBook() { renderWrongBook(); const o=document.getElementById('wrong-book-overlay'); o.style.display='flex'; o.setAttribute('aria-hidden','false'); }
 function closeWrongBook() { const o=document.getElementById('wrong-book-overlay'); o.style.display='none'; o.setAttribute('aria-hidden','true'); }
-function clearAllWrongBook() { if(!window.confirm('Delete all wrong answer records?\nThis cannot be undone.'))return; saveWrongBook([]); renderWrongBook(); }
+function clearAllWrongBook() { if(!window.confirm('Delete all mistake records?\nThis cannot be undone.'))return; saveWrongBook([]); renderWrongBook(); }
 
 // === State ===
 let shuffledQuestions = [];
