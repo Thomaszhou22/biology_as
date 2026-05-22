@@ -673,7 +673,7 @@ async function analyzeWrongBook() {
     const result = await callLLMWithImages(AS_BIO_PROMPT, parts, 4096);
     resultDiv.innerHTML = '<h3 style="font-weight:800;color:#92400e;margin-bottom:8px;">📊 AI 分析结果</h3>' + result.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>');
   } catch(e) {
-    resultDiv.innerHTML = '<span style="color:red">分析失败: ' + escapeHtml(e.message) + '</span>';
+    resultDiv.innerHTML = '<span style="color:red">Analysis failed: ' + escapeHtml(e.message) + '</span>';
   }
   btn.disabled = false; btn.textContent = '🧠 AI Analyze';
 }
