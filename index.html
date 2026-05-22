@@ -114,67 +114,67 @@ body > * { position: relative; z-index: 1; }
     </div>
 
     <div class="fixed-btns">
-        <button type="button" id="wrong-book-btn">错题本</button>
-        <button type="button" id="ai-settings-toggle" title="配置 AI API Key，用于分析错题的知识薄弱点和复习建议">🔑 API Key 设置</button>
-        <button type="button" id="ai-demo-btn" title="查看 AI 分析功能的演示效果" style="padding:10px 20px;border-radius:14px;border:none;background:linear-gradient(135deg,#92400e,#b45309);color:#fff;font-size:13px;font-family:inherit;font-weight:700;cursor:pointer;box-shadow:0 2px 8px rgba(146,64,14,0.25);transition:all 0.25s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 12px rgba(146,64,14,0.35)'" onmouseout="this.style.transform='';this.style.boxShadow='0 2px 8px rgba(146,64,14,0.25)'">🎬 Demo</button>
+        <button type="button" id="wrong-book-btn">Wrong Book</button>
+        <button type="button" id="ai-settings-toggle" title="Configure AI API Key to analyze weak knowledge points and study suggestions">🔑 API Key</button>
+        <button type="button" id="ai-demo-btn" title="View a demo of the AI analysis feature" style="padding:10px 20px;border-radius:14px;border:none;background:linear-gradient(135deg,#92400e,#b45309);color:#fff;font-size:13px;font-family:inherit;font-weight:700;cursor:pointer;box-shadow:0 2px 8px rgba(146,64,14,0.25);transition:all 0.25s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 4px 12px rgba(146,64,14,0.35)'" onmouseout="this.style.transform='';this.style.boxShadow='0 2px 8px rgba(146,64,14,0.25)'">🎬 Demo</button>
     </div>
 
-    <div id="wrong-book-overlay" role="dialog" aria-modal="true" aria-label="错题本" aria-hidden="true">
+    <div id="wrong-book-overlay" role="dialog" aria-modal="true" aria-label="Wrong Book" aria-hidden="true">
         <div id="wrong-book-panel">
-            <h2 id="wrong-book-title">错题本</h2>
+            <h2 id="wrong-book-title">Wrong Book</h2>
 
             <div id="ai-settings-panel">
                 <div class="ai-prov-row" id="ai-prov-row"></div>
-                <select class="ai-model-select" id="ai-model-select"><option>选择模型</option></select>
-                <input class="ai-key-input" id="ai-key-input" type="password" placeholder="输入 API Key...">
+                <select class="ai-model-select" id="ai-model-select"><option>Select Model</option></select>
+                <input class="ai-key-input" id="ai-key-input" type="password" placeholder="Enter API Key...">
                 <div class="ai-status" id="ai-status"></div>
-                <button type="button" id="ai-test-btn" style="padding:6px 16px;border-radius:8px;border:1px solid #e0d8c8;background:#fff;font-size:12px;font-weight:600;cursor:pointer;">测试连接</button>
+                <button type="button" id="ai-test-btn" style="padding:6px 16px;border-radius:8px;border:1px solid #e0d8c8;background:#fff;font-size:12px;font-weight:600;cursor:pointer;">Test Connection</button>
             </div>
             <div id="wrong-book-list"></div>
             <div class="wrong-book-footer-actions">
-                <button type="button" id="ai-analyze-btn" disabled>🧠 AI 分析错题</button>
-                <button type="button" id="wrong-book-clear-all">清空全部</button>
-                <button type="button" id="wrong-book-close">关闭</button>
+                <button type="button" id="ai-analyze-btn" disabled>🧠 AI Analyze</button>
+                <button type="button" id="wrong-book-clear-all">Clear All</button>
+                <button type="button" id="wrong-book-close">Close</button>
             </div>
             <div id="ai-result"></div>
         </div>
     </div>
 
 
-    <div id="finish-overlay" role="dialog" aria-modal="true" aria-label="答题完成" aria-hidden="true">
+    <div id="finish-overlay" role="dialog" aria-modal="true" aria-label="Quiz Complete" aria-hidden="true">
         <div id="finish-modal">
-            <h2>🎉 答题完成</h2>
+            <h2>🎉 Quiz Complete</h2>
             <div id="finish-stats">
-                <p>总题数: <strong id="finish-total">0</strong></p>
-                <p>✅ 正确: <strong id="finish-correct">0</strong></p>
-                <p>❌ 错误: <strong id="finish-wrong">0</strong></p>
-                <p>正确率: <strong id="finish-acc">—</strong></p>
+                <p>Total: <strong id="finish-total">0</strong></p>
+                <p>✅ Correct: <strong id="finish-correct">0</strong></p>
+                <p>❌ Wrong: <strong id="finish-wrong">0</strong></p>
+                <p>Accuracy: <strong id="finish-acc">—</strong></p>
             </div>
-            <button type="button" class="btn-action" id="finish-restart-btn">重新开始</button>
+            <button type="button" class="btn-action" id="finish-restart-btn">Restart</button>
         </div>
     </div>
 
-    <div id="preload-overlay"><div class="preload-text">正在加载题目图片...</div><div class="preload-bar-wrap"><div class="preload-bar-fill" id="preload-bar-fill"></div></div><div class="preload-detail" id="preload-detail">已加载 0/0</div></div>
+    <div id="preload-overlay"><div class="preload-text">Loading question images...</div><div class="preload-bar-wrap"><div class="preload-bar-fill" id="preload-bar-fill"></div></div><div class="preload-detail" id="preload-detail">已加载 0/0</div></div>
 
     <div id="quiz-container">
         <div id="progress-bar"><div id="progress-fill"></div></div>
         <div id="score-display">
             <span>✅ <span id="correct-count">0</span></span>
             <span>❌ <span id="wrong-count">0</span></span>
-            <span>剩余 <span id="remaining-count">0</span></span>
+            <span>Remaining <span id="remaining-count">0</span></span>
         </div>
-        <div id="question-counter">请点击开始答题</div>
+        <div id="question-counter">Click to start</div>
         <div id="question-box">
-            <div id="q-text">点击下方按钮开始答题</div>
+            <div id="q-text">Click the button below to start</div>
             <img id="q-image" style="display:none;" onclick="zoomImage(this.src)" />
             <div id="zoom-hint" class="zoom-hint" style="display:none;"><button class="zoom-btn" onclick="zoomImage(document.getElementById('q-image').src)">放大图片</button></div>
             <div id="options"></div>
             <div id="msg" class="status-msg"></div>
         </div>
         <div id="info-panel">
-            <button type="button" class="btn-action" id="start-btn">开始答题</button>
-            <button type="button" class="btn-action" id="abort-btn" style="background:#c0392b;display:none;">终止答题</button>
-            <button type="button" id="restart-btn" class="btn-action" style="background:none;border:1px solid #d1d8e0;color:#999;font-size:12px;margin-top:60px;display:none;">重新开始</button>
+            <button type="button" class="btn-action" id="start-btn">Start Quiz</button>
+            <button type="button" class="btn-action" id="abort-btn" style="background:#c0392b;display:none;">Abort Quiz</button>
+            <button type="button" id="restart-btn" class="btn-action" style="background:none;border:1px solid #d1d8e0;color:#999;font-size:12px;margin-top:60px;display:none;">Restart</button>
         </div>
     </div>
 
@@ -298,12 +298,12 @@ function escapeHtml(str) { return String(str).replaceAll('&','&amp;').replaceAll
 function renderWrongBook() {
     const container = document.getElementById('wrong-book-list');
     const records = getWrongBook();
-    if (!records.length) { container.innerHTML = '<p>暂无错题。</p>'; return; }
-    container.innerHTML = records.map((item, i) => `<div class="wrong-book-item"><div class="wrong-book-meta"><strong>#${i+1}</strong></div><div class="wrong-book-question"><b>Q${item.questionIndex||'?'}:</b> ${item.img ? '<img src="questions/'+escapeHtml(item.question)+'" style="max-width:200px;border-radius:4px;cursor:zoom-in;" onclick="zoomImage(this.src)">' : escapeHtml(item.question)}</div><div class="wrong-book-answer"><b>正确答案:</b> ${escapeHtml(item.answer)}</div></div>`).join('');
+    if (!records.length) { container.innerHTML = '<p>No wrong answers yet.</p>'; return; }
+    container.innerHTML = records.map((item, i) => `<div class="wrong-book-item"><div class="wrong-book-meta"><strong>#${i+1}</strong></div><div class="wrong-book-question"><b>Q${item.questionIndex||'?'}:</b> ${item.img ? '<img src="questions/'+escapeHtml(item.question)+'" style="max-width:200px;border-radius:4px;cursor:zoom-in;" onclick="zoomImage(this.src)">' : escapeHtml(item.question)}</div><div class="wrong-book-answer"><b>Correct Answer:</b> ${escapeHtml(item.answer)}</div></div>`).join('');
 }
 function openWrongBook() { renderWrongBook(); const o=document.getElementById('wrong-book-overlay'); o.style.display='flex'; o.setAttribute('aria-hidden','false'); }
 function closeWrongBook() { const o=document.getElementById('wrong-book-overlay'); o.style.display='none'; o.setAttribute('aria-hidden','true'); }
-function clearAllWrongBook() { if(!window.confirm('确定要清空错题本中的全部记录吗？\n此操作无法撤销。'))return; saveWrongBook([]); renderWrongBook(); }
+function clearAllWrongBook() { if(!window.confirm('Delete all wrong answer records?\nThis cannot be undone.'))return; saveWrongBook([]); renderWrongBook(); }
 
 // === State ===
 let shuffledQuestions = [];
@@ -395,7 +395,7 @@ function renderCurrentQuestion() {
     const item = currentQuestionItem;
     if (!item) return;
     document.getElementById('question-counter').textContent = `第 ${questionIndex + 1} / ${shuffledQuestions.length} 题`;
-    document.getElementById('q-text').innerHTML = `<b>Q${questionIndex + 1}：</b>`;
+    document.getElementById('q-text').innerHTML = `<b>Q${questionIndex + 1}:</b>`;
     const qImg = document.getElementById('q-image');
     const hint = document.getElementById('zoom-hint');
     if (item.img) {
@@ -429,11 +429,11 @@ function handleAnswer(letter, clickedBtn) {
     allBtns.forEach(b => { b.disabled = true; if (b.textContent === qItem.a) b.classList.add('correct-answer'); });
     if (correct) {
         totalCorrect++;
-        showMsg('✅ 正确！', 'correct');
+        showMsg('✅ Correct!', 'correct');
     } else {
         totalWrong++;
         clickedBtn.classList.add('wrong-answer');
-        showMsg(`❌ 错误！正确答案是: ${qItem.a}`, 'incorrect');
+        showMsg(`❌ Wrong! Correct answer: ${qItem.a}`, 'incorrect');
         addWrongQuestionRecord(qItem, questionIndex + 1);
     }
     updateScoreDisplay();
@@ -483,8 +483,8 @@ function abortQuiz() {
     document.getElementById('start-btn').style.display = 'block';
     document.getElementById('progress-bar').style.display = 'none';
     document.getElementById('score-display').style.display = 'none';
-    document.getElementById('question-counter').textContent = '请点击开始答题';
-    document.getElementById('q-text').textContent = '点击下方按钮开始答题';
+    document.getElementById('question-counter').textContent = 'Click to start';
+    document.getElementById('q-text').textContent = 'Click the button below to start';
     document.getElementById('q-image').style.display = 'none';
     document.getElementById('zoom-hint').style.display = 'none';
     document.getElementById('options').innerHTML = '';
@@ -553,7 +553,7 @@ function initAIProviderUI() {
 function updateModelOptions(provId) {
   const p = AI_PROVIDERS.find(x => x.id === provId);
   const sel = document.getElementById('ai-model-select');
-  if (!p) { sel.innerHTML = '<option>选择模型</option>'; return; }
+  if (!p) { sel.innerHTML = '<option>Select Model</option>'; return; }
   sel.innerHTML = p.models.map(m => `<option value="${m}">${m}</option>`).join('');
   sel.value = p.defaultModel;
 }
@@ -570,9 +570,9 @@ function persistAI() {
 async function testAIConnection() {
   const s = loadAISettings(); if (!s.provider || !s.apiKey) return;
   const statusEl = document.getElementById('ai-status');
-  statusEl.textContent = '测试中...'; statusEl.className = 'ai-status testing';
-  try { await callLLM('Reply with OK', 'Hi', 10); statusEl.textContent = '✅ 连接成功！'; statusEl.className = 'ai-status ok'; document.getElementById('ai-analyze-btn').disabled = false; }
-  catch(e) { statusEl.textContent = '❌ ' + (e.message || '连接失败'); statusEl.className = 'ai-status fail'; }
+  statusEl.textContent = 'Testing...'; statusEl.className = 'ai-status testing';
+  try { await callLLM('Reply with OK', 'Hi', 10); statusEl.textContent = '✅ Connected!'; statusEl.className = 'ai-status ok'; document.getElementById('ai-analyze-btn').disabled = false; }
+  catch(e) { statusEl.textContent = '❌ ' + (e.message || 'Connection failed'); statusEl.className = 'ai-status fail'; }
 }
 
 async function callLLM(sys, usr, maxT) {
@@ -612,7 +612,7 @@ async function callLLMWithImages(sys, textParts, maxT) {
         if (s.provider === 'google') { contentParts.push({ inline_data: { mime_type: mimeType, data: base64Data } }); }
         else if (s.provider === 'anthropic') { contentParts.push({ type: 'image', source: { type: 'base64', media_type: mimeType, data: base64Data } }); }
         else { contentParts.push({ type: 'image_url', image_url: { url: b64 } }); }
-      } catch(e) { contentParts.push({ type: 'text', text: `[图片加载失败: ${part.url}]` }); }
+      } catch(e) { contentParts.push({ type: 'text', text: `[Image load failed: ${part.url}]` }); }
     }
   }
   if (s.provider === 'anthropic') {
@@ -650,32 +650,32 @@ Analyze the wrong answers and provide:
 4. **Key Concepts to Reinforce**: Brief summaries of the misunderstood concepts
 5. **Practice Recommendations**: Suggest specific types of questions to practice more
 
-Respond in Chinese (中文). Be specific and actionable. Use markdown formatting.`;
+Respond in English. Be specific and actionable. Use markdown formatting.`;
 
 async function analyzeWrongBook() {
   const records = getWrongBook();
-  if (!records.length) { alert('错题本为空，无法分析。'); return; }
+  if (!records.length) { alert('Wrong book is empty, cannot analyze.'); return; }
   const btn = document.getElementById('ai-analyze-btn');
   const resultDiv = document.getElementById('ai-result');
-  btn.disabled = true; btn.textContent = '🧠 分析中...';
+  btn.disabled = true; btn.textContent = '🧠 Analyzing...';
   resultDiv.style.display = 'block';
-  resultDiv.innerHTML = '<em>正在加载图片并分析...</em>';
+  resultDiv.innerHTML = '<em>Loading images and analyzing...</em>';
   try {
     const parts = [];
     const sample = records.slice(0, 20);
-    parts.push({ type: 'text', text: `我有 ${records.length} 道错题，以下是其中 ${sample.length} 道题的截图和正确答案。请分析我的知识薄弱点：\n\n` });
+    parts.push({ type: 'text', text: `I have ${records.length} wrong answers, here are ${sample.length} of them with correct answers. Analyze my weak points:\n\n` });
     for (let i = 0; i < sample.length; i++) {
       const r = sample[i];
-      parts.push({ type: 'text', text: `--- 第${i+1}题 (正确答案: ${r.answer}) ---` });
+      parts.push({ type: 'text', text: `--- Q${i+1} (Correct: ${r.answer}) ---` });
       if (r.img) parts.push({ type: 'image', url: 'questions/' + r.question });
     }
-    parts.push({ type: 'text', text: '\n请给出详细的知识点分析和复习建议。' });
+    parts.push({ type: 'text', text: '\nPlease provide detailed analysis and study recommendations.' });
     const result = await callLLMWithImages(AS_BIO_PROMPT, parts, 4096);
     resultDiv.innerHTML = '<h3 style="font-weight:800;color:#92400e;margin-bottom:8px;">📊 AI 分析结果</h3>' + result.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>');
   } catch(e) {
     resultDiv.innerHTML = '<span style="color:red">分析失败: ' + escapeHtml(e.message) + '</span>';
   }
-  btn.disabled = false; btn.textContent = '🧠 AI 分析错题';
+  btn.disabled = false; btn.textContent = '🧠 AI Analyze';
 }
 
 document.getElementById('ai-settings-toggle').onclick = () => {
@@ -687,7 +687,7 @@ document.getElementById('ai-settings-toggle').onclick = () => {
   const panel = document.createElement('div');
   panel.style.cssText = 'background:#fff;border-radius:24px;padding:24px;width:min(440px,90vw);box-shadow:0 12px 40px rgba(0,0,0,0.15);border:1px solid #e0d8c8;';
   const src = document.getElementById('ai-settings-panel');
-  if (src) { panel.innerHTML = '<h3 style="font-weight:800;color:#92400e;margin:0 0 16px;text-align:center;">🔑 API Key 设置</h3>'; panel.appendChild(src); src.classList.add('open'); src.style.display = 'block'; src.style.margin = '0'; src.style.border = 'none'; src.style.background = 'transparent'; }
+  if (src) { panel.innerHTML = '<h3 style="font-weight:800;color:#92400e;margin:0 0 16px;text-align:center;">🔑 API Key</h3>'; panel.appendChild(src); src.classList.add('open'); src.style.display = 'block'; src.style.margin = '0'; src.style.border = 'none'; src.style.background = 'transparent'; }
   overlay.onclick = (e) => { if (e.target === overlay) overlay.style.display = 'none'; };
   overlay.appendChild(panel);
   document.body.appendChild(overlay);
@@ -697,107 +697,105 @@ document.getElementById('ai-analyze-btn').onclick = analyzeWrongBook;
 initAIProviderUI();
 
 // === Demo Analysis ===
-const AS_DEMO_ANALYSIS = `📊 **AI 错题分析结果（Demo 演示）**
+const AS_DEMO_ANALYSIS = `📊 **AI Wrong Answer Analysis (Demo)**
 
-本次分析基于 12 道错题，涵盖 4 个 AS 生物学主题。
-
-━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
-
-**1. 📌 薄弱知识点识别**
-
-根据错题分布，以下是你最需要关注的 AS 级别知识领域：
-
-| 优先级 | 主题 | 错题数 | 薄弱程度 |
-|--------|------|--------|----------|
-| ⭐⭐⭐ | Gene Expression & Regulation | 4 题 | 🔴 严重薄弱 |
-| ⭐⭐⭐ | Cell Membranes & Transport | 3 题 | 🔴 明显薄弱 |
-| ⭐⭐ | Enzymes (AS depth) | 3 题 | 🟡 需要巩固 |
-| ⭐ | Immunity (AS depth) | 2 题 | 🟡 需要巩固 |
+This analysis is based on 12 wrong answers across 4 AS Biology topics.
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-**2. 🔍 错误模式分析**
+**1. 📌 Weak Knowledge Areas**
 
-**模式 A：分子生物学深度理解不足**（Gene Expression，占错误的 33%）
-- 转录（transcription）与翻译（translation）的阶段容易混淆
-- 启动子（promoter）和操纵基因（operator）的功能区分不清
-- 对lac operon的诱导和阻遏机制理解不到位
-- 密码子（codon）与反密码子（anticodon）的方向性容易搞反（5'→3'）
-
-**模式 B：膜运输机制辨析困难**（Cell Membranes，占错误的 25%）
-- 主动运输中 carrier protein 的构象变化机制理解模糊
-- 对流动镶嵌模型（fluid mosaic model）中胆固醇的作用记忆不清
-- 易混淆 facilitated diffusion 和 active transport 的异同点
-- 对水势（water potential）的计算（ψ = ψs + ψp）不熟练
-
-**模式 C：AS级别酶学深度不够**（Enzymes，占错误的 25%）
-- Vmax 和 Km 值的含义及影响因素分析不到位
-- competitive vs non-competitive inhibition 的曲线图区分能力弱
-- 米氏方程（Michaelis-Menten）的应用场景不熟悉
-- immobilised enzyme 的优点/局限性记忆不牢固
-
-**模式 D：免疫学细节辨析**（Immunity，占错误的 17%）
-- T helper cells 和 T killer cells 的激活条件混淆
-- 对 clonal selection theory 的步骤理解不够清晰
+| Priority | Topic | Wrong Count | Severity |
+|----------|-------|-------------|----------|
+| ⭐⭐⭐ | Gene Expression & Regulation | 4 | 🔴 Critical |
+| ⭐⭐⭐ | Cell Membranes & Transport | 3 | 🔴 Significant |
+| ⭐⭐ | Enzymes (AS depth) | 3 | 🟡 Needs Review |
+| ⭐ | Immunity (AS depth) | 2 | 🟡 Needs Review |
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-**3. 📋 针对性复习计划**
+**2. 🔍 Error Pattern Analysis**
 
-**Week 1 — 基因表达与调控（最高优先级）**
-- Day 1-2：画出完整的转录和翻译流程图，标注所有酶和分子
-- Day 3：研究 lac operon 模型，画出有/无乳糖时的状态对比图
-- Day 4-5：做 20 道基因表达相关题目，重点练数据解读题
+**Pattern A: Insufficient Molecular Biology Depth** (Gene Expression, 33%)
+- Confusing transcription vs translation stages
+- Promoter vs operator function unclear
+- Lac operon induction/repression mechanism not fully understood
+- Codon vs anticodon directionality (5'→3') often reversed
 
-**Week 2 — 细胞膜与运输**
-- Day 1-2：制作膜运输方式对比表（simple diffusion / facilitated diffusion / active transport / co-transport）
-- Day 3：练习水势计算题
-- Day 4-5：做一套膜运输综合测试
+**Pattern B: Membrane Transport Mechanism Confusion** (Cell Membranes, 25%)
+- Carrier protein conformational change in active transport is unclear
+- Role of cholesterol in the fluid mosaic model forgotten
+- Facilitated diffusion vs active transport similarities/differences confused
+- Water potential calculations (ψ = ψs + ψp) not practiced enough
 
-**Week 3 — 酶学 + 免疫学深度**
-- Day 1：画 Lineweaver-Burk plot，标注 competitive/non-competitive inhibition 的区别
-- Day 2：制作免疫反应流程图（antigen presentation → T cell activation → B cell → plasma cell → antibody）
-- Day 3：综合模拟测试
+**Pattern C: AS-Level Enzyme Depth Lacking** (Enzymes, 25%)
+- Vmax and Km meaning and influencing factors analysis is weak
+- Distinguishing competitive vs non-competitive inhibition curves is difficult
+- Michaelis-Menten equation application unfamiliar
+- Advantages/limitations of immobilised enzymes not memorized
+
+**Pattern D: Immunology Detail Confusion** (Immunity, 17%)
+- T helper cell vs T killer cell activation conditions confused
+- Clonal selection theory steps not clear enough
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-**4. 💡 核心概念强化**
+**3. 📋 Targeted Study Plan**
 
-**基因表达核心：**
+**Week 1 — Gene Expression & Regulation (Highest Priority)**
+- Day 1-2: Draw complete transcription and translation flowcharts, label all enzymes and molecules
+- Day 3: Study the lac operon model, draw comparison diagrams (with/without lactose)
+- Day 4-5: Do 20 gene expression questions, focus on data interpretation
+
+**Week 2 — Cell Membranes & Transport**
+- Day 1-2: Create a comparison table of transport methods (simple diffusion / facilitated diffusion / active transport / co-transport)
+- Day 3: Practice water potential calculation questions
+- Day 4-5: Complete a membrane transport comprehensive test
+
+**Week 3 — Enzymes + Immunity Depth**
+- Day 1: Draw Lineweaver-Burk plots, label differences for competitive/non-competitive inhibition
+- Day 2: Create immune response flowchart (antigen presentation → T cell activation → B cell → plasma cell → antibody)
+- Day 3: Full mock test
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+**4. 💡 Key Concept Reinforcement**
+
+**Gene Expression Essentials:**
 - Transcription: DNA → mRNA (by RNA polymerase, in nucleus, 5'→3')
 - Translation: mRNA → polypeptide (by ribosomes, on RER or free)
-- Promoter = RNA聚合酶结合位点（不是被转录的部分）
-- Template strand (3'→5') → coding strand 的序列与 mRNA 相同（T→U）
+- Promoter = RNA polymerase binding site (not transcribed)
+- Template strand (3'→5') → coding strand matches mRNA sequence (T→U)
 
-**膜运输核心：**
-- Simple diffusion: 小分子、非极性（O₂, CO₂, 脂类）
-- Facilitated diffusion: 大分子/极性（葡萄糖、氨基酸），需要 channel/carrier protein
-- Active transport: 逆浓度梯度，需要 ATP，只有 carrier protein
-- Water potential: 纯水 = 0 kPa，加入溶质 → ψs 更负 → ψ 更负
+**Membrane Transport Essentials:**
+- Simple diffusion: small, non-polar molecules (O₂, CO₂, lipids)
+- Facilitated diffusion: large/polar (glucose, amino acids), requires channel/carrier protein
+- Active transport: against concentration gradient, requires ATP, carrier protein only
+- Water potential: pure water = 0 kPa, adding solute → ψs more negative → ψ more negative
 
-**AS酶学核心：**
-- Vmax = 酶被底物饱和时的最大反应速率
-- Km = 反应速率达到 Vmax/2 时的底物浓度（Km越小 = 亲和力越高）
-- Competitive inhibition: Km↑, Vmax不变（与底物竞争active site）
-- Non-competitive inhibition: Km不变, Vmax↓（改变酶的形状）
+**AS Enzyme Essentials:**
+- Vmax = max rate when enzyme is saturated with substrate
+- Km = substrate concentration at Vmax/2 (lower Km = higher affinity)
+- Competitive inhibition: Km↑, Vmax unchanged (competes for active site)
+- Non-competitive inhibition: Km unchanged, Vmax↓ (changes enzyme shape)
 
 ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
 
-**5. 🎯 练习建议**
+**5. 🎯 Practice Recommendations**
 
-- 基因表达：多做带有实验数据的题目（如基因表达量对比、mutation 影响）
-- 膜运输：重点练习带有水势计算和曲线图的题目
-- 酶学：画 Lineweaver-Burk 图来区分 inhibitor 类型是最常考的技能
-- 免疫：Past paper 中 Q3-Q5 经常出免疫相关的 extended response 题
-- 建议每天用这个 Quiz 工具做 25 题，优先选薄弱章节
-- 每周末做一套完整的 AS Biology past paper (Paper 1)`;
+- Gene expression: Practice questions with experimental data (gene expression comparisons, mutation effects)
+- Membrane transport: Focus on water potential calculations and graph-based questions
+- Enzymes: Drawing Lineweaver-Burk plots to distinguish inhibitor types is the most commonly tested skill
+- Immunity: Past paper Q3-Q5 often feature immune-related extended response questions
+- Recommended: Use this Quiz tool daily for 25 questions, prioritizing weak chapters
+- Do a full AS Biology past paper (Paper 1) every weekend`;
 
 document.getElementById('ai-demo-btn').onclick = () => {
   openWrongBook();
   const resultDiv = document.getElementById('ai-result');
   resultDiv.style.display = 'block';
   resultDiv.innerHTML = '<h3 style="font-weight:800;color:#92400e;margin-bottom:8px;">📊 AI 分析结果</h3>' +
-    '<div style="margin-bottom:12px;padding:8px 14px;border-radius:10px;background:#fef3c7;border:1px solid #fde68a;font-size:13px;color:#92400e;font-weight:600;">🎬 这是一段演示，展示 AI 分析功能的输出效果。配置 API Key 后可对真实错题进行分析。</div>' +
+    '<div style="margin-bottom:12px;padding:8px 14px;border-radius:10px;background:#fef3c7;border:1px solid #fde68a;font-size:13px;color:#92400e;font-weight:600;">🎬 This is a demo showing the AI analysis output. Configure an API Key to analyze your real wrong answers.</div>' +
     AS_DEMO_ANALYSIS.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>').replace(/\n/g, '<br>');
 };
 
