@@ -4,6 +4,8 @@ Cambridge **AS Biology (9700)** 选择题练习工具。包含 **220 道**图片
 
 🌐 **在线练习**: [thomaszhou22.github.io/biology_as](https://thomaszhou22.github.io/biology_as/)
 
+🎮 **itch.io (Play in browser)**: [thomaszhou22.itch.io/biology-jump-as](https://thomaszhou22.itch.io/biology-jump-as)
+
 ---
 
 ## 功能
