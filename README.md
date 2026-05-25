@@ -1,4 +1,4 @@
-# Biology Jump — AS Level Edition 🐸
+# Biology — AS Level Edition 🐸
 
 <div align="center">
 
@@ -18,7 +18,7 @@
 
 ## 🌍 Mission
 
-**Free education for every CIE student worldwide.** Biology Jump is a board-game-style revision tool that makes studying AS Level Biology (9700) engaging and accessible — no signup, no paywall, no installation. Just open and play.
+**Free education for every CIE student worldwide.** Biology is a board-game-style revision tool that makes studying AS Level Biology (9700) engaging and accessible — no signup, no paywall, no installation. Just open and play.
 
 Built by a student, for students.
 

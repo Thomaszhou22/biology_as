@@ -1,4 +1,4 @@
-# Biology Jump — AS Level Edition 🐸
+# Biology — AS Level Edition 🐸
 
 <div align="center">
 
@@ -18,7 +18,7 @@
 
 ## 🌍 项目使命
 
-**让全球 CIE 学生都能免费复习生物。** Biology Jump 是一个棋盘游戏式的复习工具，让 AS Level Biology (9700) 的学习变得有趣且易于获取——无需注册、无需付费、无需安装，打开即玩。
+**让全球 CIE 学生都能免费复习生物。** Biology 是一个棋盘游戏式的复习工具，让 AS Level Biology (9700) 的学习变得有趣且易于获取——无需注册、无需付费、无需安装，打开即玩。
 
 由学生开发，为学生服务。
 

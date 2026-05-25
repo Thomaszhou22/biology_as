@@ -1,4 +1,4 @@
-# Contributing to Biology Jump — AS Level Edition 🐸
+# Contributing to Biology — AS Level Edition 🐸
 
 First off, thank you for considering contributing! This project exists to help CIE AS Level Biology students worldwide study for free.
 
