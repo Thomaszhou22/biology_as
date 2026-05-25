@@ -18,7 +18,7 @@
 
 ## 🌍 Mission
 
-**Free education for every CIE student worldwide.** Biology is a board-game-style revision tool that makes studying AS Level Biology (9700) engaging and accessible — no signup, no paywall, no installation. Just open and play.
+**Free education for every CIE student worldwide.** Biology is an interactive revision tool that makes studying AS Level Biology (9700) engaging and accessible — no signup, no paywall, no installation. Just open and play.
 
 Built by a student, for students.
 
@@ -29,8 +29,8 @@ Built by a student, for students.
 - High-quality images that replicate real exam paper formatting
 - Covers all major AS Biology topics
 
-### 🎮 Gameplay
-- **Board game format** — roll dice, answer questions, race to finish
+### 📝 Practice Modes
+- **Chapter-based practice — select chapters, answer questions, track progress
 - **Single player or 2-player** mode
 - **Chapter selection** — pick topics to focus on
 - **Image questions** — every question displayed as a clear image
