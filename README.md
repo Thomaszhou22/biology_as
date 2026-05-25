@@ -1,47 +1,74 @@
-# 🧬 Biology AS — AS Level 生物选择题练习
+# Biology Jump — AS Level Edition 🐸
 
-Cambridge **AS Biology (9700)** 选择题练习工具。包含 **220 道**图片选择题，还原真实考试体验，支持错题本和即时反馈。
+<div align="center">
 
-🌐 **在线练习**: [thomaszhou22.github.io/biology_as](https://thomaszhou22.github.io/biology_as/)
+[English](#english) | [中文](./README_CN.md)
 
-🎮 **itch.io (Play in browser)**: [thomaszhou22.itch.io/biology-jump-as](https://thomaszhou22.itch.io/biology-jump-as)
+[![GitHub stars](https://img.shields.io/github/stars/Thomaszhou22/biology_jump_as?style=social)](https://github.com/Thomaszhou22/biology_jump_as/stargazers)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![itch.io](https://img.shields.io/badge/itch.io-Play%20Free-FA5C50?logo=itch.io&logoColor=white)](https://thomaszhou22.itch.io/biology-jump-as)
 
----
+[Play on itch.io](https://thomaszhou22.itch.io/biology-jump-as) | [GitHub Pages](https://thomaszhou22.github.io/biology_as/) | [Contributing](./CONTRIBUTING.md)
 
-## 功能
-
-### 📚 题库（220 题）
-- **220 道** AS Biology 多项选择题
-- 题目以高清图片展示，还原真实考卷排版
-
-### ✅ 答题功能
-- **即时判分** — 选择后立即显示对错，高亮正确答案
-- **进度追踪** — 实时显示正确 / 错误 / 剩余题数和进度条
-- **答题完成** — 全部答完后显示总题数、正确率统计
-
-### 📖 错题本
-- 自动收录答错的题目（含图片、正确答案、时间戳）
-- 可查看和放大错题图片
-- 支持一键清空
-
-### 💾 进度保存
-- 答题进度自动保存到浏览器（localStorage）
-- 刷新页面后自动恢复到上次位置
-- 可随时终止答题并清空进度
-
-### 🔍 图片放大
-- 题目图片支持点击放大查看细节
+</div>
 
 ---
 
-## 技术信息
+<a id="english"></a>
 
-- **技术栈**: 纯 HTML + CSS + JavaScript（无框架）
-- **题目格式**: 图片选择题（JPG）
-- **数据存储**: localStorage（刷新不丢失）
-- **部署**: GitHub Pages
-- **无需安装**: 浏览器打开即用
+## 🌍 Mission
 
-## 许可
+**Free education for every CIE student worldwide.** Biology Jump is a board-game-style revision tool that makes studying AS Level Biology (9700) engaging and accessible — no signup, no paywall, no installation. Just open and play.
 
-MIT License
+Built by a student, for students.
+
+## ✨ Features
+
+### 📚 Question Bank (220 Questions)
+- **220 image-based multiple choice questions** for CIE AS Level Biology
+- High-quality images that replicate real exam paper formatting
+- Covers all major AS Biology topics
+
+### 🎮 Gameplay
+- **Board game format** — roll dice, answer questions, race to finish
+- **Single player or 2-player** mode
+- **Chapter selection** — pick topics to focus on
+- **Image questions** — every question displayed as a clear image
+
+### 📖 Study Tools
+- **Mistake Collection** — automatically tracks wrong answers for review
+- **Instant feedback** — see correct answers immediately
+- **Progress saving** — resume anytime with localStorage
+
+## 🚀 Play Now
+
+**No download needed.** Choose your platform:
+
+| Platform | Link | Notes |
+|----------|------|-------|
+| 🎮 itch.io | [Play in browser](https://thomaszhou22.itch.io/biology-jump-as) | Best experience |
+| 🌐 GitHub Pages | [Open](https://thomaszhou22.github.io/biology_as/) | Alternative mirror |
+
+## 🤝 Contributing
+
+We welcome contributions! See [CONTRIBUTING.md](./CONTRIBUTING.md) for how to:
+
+- Add new questions
+- Fix errors in existing questions
+- Translate the interface
+- Report issues
+
+## 🛠️ Tech Stack
+
+- **Pure HTML + CSS + JavaScript** — zero frameworks, zero dependencies
+- **Image-based questions**
+- **localStorage** for progress saving
+- **Deployed** on GitHub Pages & itch.io
+
+## 📄 License
+
+[MIT License](./LICENSE) — free to use, modify, and distribute.
+
+---
+
+*Made with ❤️ for CIE students everywhere.*
