@@ -934,7 +934,11 @@ function startMockExam() {
     }
   }, 1000);
 
-  startQuiz(false);
+  // Reset counters and start without re-shuffling
+  questionIndex = 0;
+  totalCorrect = 0;
+  totalWrong = 0;
+  startQuiz(true);
 }
 
 function formatTime(seconds) {
